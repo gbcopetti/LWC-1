@@ -1,0 +1,49 @@
+<!-- Exercicio LWC - 1 -->
+<template>
+	<lightning-card>
+		<div class="slds-m-arround_medium">
+			<h1 class="slds-text-heading_large">
+				Empresa 1
+			</h1>
+
+			<p> Empresa: </p>
+			<p> CNPJ: </p>
+			<p> Endereço: </p>
+		</div>
+
+		<div class="slds-m-arround_medium" if:true={visible}>
+			<h1 class="slds-text-heading_large">
+				Empresa 2
+			</h1>
+
+			<p> Empresa: </p>
+			<p> CNPJ: </p>
+			<p> Endereço: </p>
+		</div>
+
+		<div class="slds-m-arround_medium" if:true={visible}>
+			<h1 class="slds-text-heading_large">
+				Empresa 3
+			</h1>
+
+			<p> Empresa: </p>
+			<p> CNPJ: </p>
+			<p> Endereço: </p>
+		</div>
+		<br>
+		<lightning-button variant="brand" label="Esconder Empresas 2 e 3" title="Esconder Empresas" onclick={escondeEmpresa}
+			class="slds-m-left_x-small"></lightning-button>
+		<br>
+
+		<div class="slds-m-arround_medium">
+			<h1 class="slds-text-heading_large">
+				Quem é esse pokemon?
+			</h1>
+			<img src={imagem} alt="Pokemon" />
+		</div>
+		<br>
+		<lightning-button variant="destructive" label="Revelar Pokemon" title="Revelar Pokemon" onclick={trocarImagem}
+			class="slds-m-left_x-small"></lightning-button>
+
+	</lightning-card>
+</template>
